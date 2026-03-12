@@ -1,0 +1,83 @@
+[
+  {
+    "pmid": "demo_1",
+    "title": "Pembrolizumab for Advanced Melanoma: A Clinical Trial",
+    "abstract": "This study evaluated pembrolizumab, a PD-1 checkpoint inhibitor, in patients with advanced melanoma. Results showed significant improvement in overall survival compared to standard therapy. The objective response rate was 38% with manageable side effects.",
+    "authors": [
+      "Smith, J.",
+      "Johnson, M.",
+      "Williams, R."
+    ],
+    "journal": "New England Journal of Medicine",
+    "publication_date": "2024-01-15",
+    "therapeutic_areas": [
+      "oncology",
+      "immunotherapy"
+    ],
+    "relevance_score": 0.85
+  },
+  {
+    "pmid": "demo_2",
+    "title": "CAR-T Cell Therapy in Relapsed B-Cell Lymphoma",
+    "abstract": "CAR-T cell therapy demonstrated remarkable efficacy in patients with relapsed diffuse large B-cell lymphoma. Complete remission was achieved in 54% of patients. Cytokine release syndrome was the most common adverse event, manageable with tocilizumab.",
+    "authors": [
+      "Davis, A.",
+      "Wilson, K."
+    ],
+    "journal": "Journal of Clinical Oncology",
+    "publication_date": "2024-02-10",
+    "therapeutic_areas": [
+      "oncology",
+      "immunotherapy"
+    ],
+    "relevance_score": 0.9
+  },
+  {
+    "pmid": "demo_3",
+    "title": "Biomarkers for Immunotherapy Response in Lung Cancer",
+    "abstract": "This research identified key biomarkers predictive of response to immune checkpoint inhibitors in non-small cell lung cancer. PD-L1 expression and tumor mutational burden were the strongest predictors. The findings could help personalize immunotherapy treatment.",
+    "authors": [
+      "Brown, S.",
+      "Miller, T."
+    ],
+    "journal": "Cancer Research",
+    "publication_date": "2024-01-28",
+    "therapeutic_areas": [
+      "oncology",
+      "biomarkers"
+    ],
+    "relevance_score": 0.78
+  },
+  {
+    "pmid": "demo_4",
+    "title": "Safety Profile of Checkpoint Inhibitors in Elderly Patients",
+    "abstract": "Analysis of safety data from elderly patients (>75 years) receiving checkpoint inhibitor therapy showed similar toxicity profiles to younger patients. Immune-related adverse events occurred in 35% of patients but were generally manageable with corticosteroids.",
+    "authors": [
+      "Garcia, M.",
+      "Lee, H."
+    ],
+    "journal": "Lancet Oncology",
+    "publication_date": "2024-03-05",
+    "therapeutic_areas": [
+      "oncology",
+      "immunotherapy"
+    ],
+    "relevance_score": 0.72
+  },
+  {
+    "pmid": "demo_5",
+    "title": "Novel Targets in Cancer Immunotherapy Beyond PD-1/PD-L1",
+    "abstract": "This review explores emerging targets beyond PD-1/PD-L1 axis including LAG-3, TIM-3, and TIGIT. Early clinical trials show promising activity when combined with existing checkpoint inhibitors. These combinations may overcome resistance mechanisms.",
+    "authors": [
+      "Taylor, R.",
+      "Anderson, K."
+    ],
+    "journal": "Nature Reviews Cancer",
+    "publication_date": "2024-02-20",
+    "therapeutic_areas": [
+      "oncology",
+      "immunotherapy"
+    ],
+    "relevance_score": 0.88
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "pubmed_email": "researcher@meridian.com",
+  "pubmed_api_key": null,
+  "days_back": 7,
+  "max_publications": 100,
+  "min_relevance_score": 0.3,
+  "therapeutic_areas": [
+    "oncology",
+    "immunotherapy",
+    "targeted_therapy",
+    "biomarkers",
+    "drug_development"
+  ],
+  "output_directory": "output",
+  "review_required": true,
+  "classification_config": {
+    "relevance_weights": {
+      "text_relevance": 0.4,
+      "mesh_relevance": 0.3,
+      "journal_relevance": 0.2,
+      "publication_type": 0.1
+    },
+    "mesh_term_weights": {
+      "Neoplasms": 3.0,
+      "Immunotherapy": 3.0,
+      "Antineoplastic Agents": 2.5,
+      "Drug Therapy": 2.0,
+      "Clinical Trials": 2.0,
+      "Biomarkers": 1.5,
+      "Precision Medicine": 2.5
+    }
+  },
+  "ranking_config": {
+    "priority_weights": {
+      "clinical_impact": 0.35,
+      "relevance_to_pipeline": 0.25,
+      "publication_quality": 0.15,
+      "methodology_score": 0.10,
+      "novelty_score": 0.10,
+      "recency_score": 0.05
+    },
+    "journal_tiers": {
+      "tier_1": {
+        "journals": [
+          "new england journal of medicine",
+          "nature",
+          "science",
+          "cell",
+          "lancet",
+          "jama"
+        ],
+        "score": 1.0
+      },
+      "tier_2": {
+        "journals": [
+          "journal of clinical oncology",
+          "nature medicine",
+          "cancer cell",
+          "clinical cancer research"
+        ],
+        "score": 0.9
+      },
+      "tier_3": {
+        "journals": [
+          "cancer research",
+          "oncogene",
+          "molecular cancer therapeutics"
+        ],
+        "score": 0.7
+      }
+    }
+  },
+  "review_workflow_config": {
+    "auto_approve_threshold": 9.0,
+    "escalation_threshold": 8.5,
+    "max_reviews_per_scientist": 20,
+    "enable_auto_approval": false,
+    "review_sla_days": {
+      "immediate": 1,
+      "high": 2,
+      "medium": 5,
+      "low": 7
+    },
+    "default_reviewers": [
+      "scientist1@meridian.com",
+      "scientist2@meridian.com"
+    ]
+  },
+  "quality_thresholds": {
+    "high_priority_auto_escalate": 8.0,
+    "low_confidence_escalate": 0.3,
+    "mesh_term_minimum": 2,
+    "abstract_length_minimum": 100
+  },
+  "meridian_focus_areas": {
+    "primary_therapeutic_areas": [
+      "oncology",
+      "immunotherapy"
+    ],
+    "secondary_areas": [
+      "targeted_therapy",
+      "biomarkers",
+      "drug_development"
+    ],
+    "pipeline_compounds": [
+      "checkpoint_inhibitors",
+      "car_t_therapy",
+      "targeted_small_molecules"
+    ],
+    "competitive_intelligence": {
+      "key_competitors": [
+        "merck",
+        "bristol myers squibb",
+        "roche",
+        "pfizer",
+        "novartis"
+      ],
+      "monitor_drug_names": [
+        "pembrolizumab",
+        "nivolumab",
+        "ipilimumab",
+        "atezolizumab",
+        "durvalumab"
+      ]
+    }
+  }
+}

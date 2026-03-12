@@ -1,0 +1,208 @@
+{
+  "default_therapeutic_area": "oncology",
+  "max_search_results": 20,
+  "citation_limit": 10,
+  "confidence_threshold": 0.6,
+  "enable_uncertainty_signaling": true,
+
+  "knowledge_base": {
+    "corpus_path": "data/approved_corpus",
+    "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+    "chunk_size": 512,
+    "overlap_size": 50,
+    "index_type": "faiss",
+    "enable_caching": true,
+    "cache_size_mb": 1024
+  },
+
+  "search_engine": {
+    "similarity_threshold": 0.7,
+    "max_chunks": 10,
+    "reranking_enabled": true,
+    "semantic_search_weight": 0.7,
+    "keyword_search_weight": 0.3,
+    "recency_boost": 0.1,
+    "quality_boost": 0.15,
+    "journal_impact_boost": 0.1,
+    "query_expansion": {
+      "enabled": true,
+      "max_expansions": 3,
+      "synonym_boost": 0.8
+    }
+  },
+
+  "qa_processor": {
+    "model_name": "microsoft/BioBERT-pubmed-pmc-base",
+    "max_answer_length": 300,
+    "min_confidence": 0.5,
+    "answer_templates": {
+      "efficacy": "structured",
+      "safety": "structured",
+      "mechanism": "descriptive",
+      "comparison": "comparative",
+      "general": "adaptive"
+    },
+    "statistical_extraction": {
+      "enabled": true,
+      "extract_p_values": true,
+      "extract_confidence_intervals": true,
+      "extract_effect_sizes": true
+    }
+  },
+
+  "citation_manager": {
+    "citation_style": "ama",
+    "max_citations": 15,
+    "include_abstracts": false,
+    "include_urls": true,
+    "validate_citations": true,
+    "auto_format": true,
+    "supported_formats": [
+      "ama",
+      "vancouver",
+      "apa",
+      "bibtex",
+      "ris"
+    ]
+  },
+
+  "evidence_synthesizer": {
+    "max_evidence_pieces": 10,
+    "synthesis_method": "weighted_consensus",
+    "conflict_detection": true,
+    "confidence_threshold": 0.7,
+    "consensus_threshold": 0.6,
+    "quality_weights": {
+      "high": 1.0,
+      "medium": 0.7,
+      "low": 0.4
+    },
+    "study_type_weights": {
+      "meta_analysis": 1.0,
+      "systematic_review": 0.9,
+      "clinical_trial": 0.8,
+      "observational": 0.6,
+      "research_article": 0.5,
+      "review": 0.3
+    },
+    "conflict_resolution": {
+      "enabled": true,
+      "auto_suggest_explanations": true,
+      "flag_major_conflicts": true
+    }
+  },
+
+  "therapeutic_areas": {
+    "primary_areas": [
+      "oncology",
+      "immunotherapy"
+    ],
+    "supported_areas": [
+      "oncology",
+      "immunotherapy",
+      "targeted_therapy",
+      "biomarkers",
+      "precision_medicine",
+      "drug_development",
+      "clinical_trials"
+    ],
+    "area_specific_configs": {
+      "oncology": {
+        "key_journals": [
+          "journal of clinical oncology",
+          "clinical cancer research",
+          "cancer research",
+          "nature cancer"
+        ],
+        "key_concepts": [
+          "overall survival",
+          "progression free survival",
+          "response rate",
+          "adverse events"
+        ]
+      },
+      "immunotherapy": {
+        "key_journals": [
+          "cancer immunology research",
+          "journal for immunotherapy of cancer",
+          "frontiers in immunology"
+        ],
+        "key_concepts": [
+          "checkpoint inhibitor",
+          "car-t",
+          "immune response",
+          "cytokine release syndrome"
+        ]
+      }
+    }
+  },
+
+  "quality_control": {
+    "enable_answer_validation": true,
+    "require_citation_support": true,
+    "min_evidence_pieces": 2,
+    "flag_low_confidence": true,
+    "uncertainty_thresholds": {
+      "low": 0.8,
+      "medium": 0.6,
+      "high": 0.4
+    }
+  },
+
+  "user_interface": {
+    "max_conversation_history": 50,
+    "enable_follow_up_suggestions": true,
+    "show_confidence_scores": true,
+    "show_uncertainty_indicators": true,
+    "export_formats": [
+      "json",
+      "pdf",
+      "markdown"
+    ]
+  },
+
+  "performance": {
+    "enable_caching": true,
+    "cache_ttl_seconds": 3600,
+    "max_concurrent_searches": 5,
+    "timeout_seconds": 30,
+    "batch_processing": {
+      "enabled": true,
+      "batch_size": 10
+    }
+  },
+
+  "logging": {
+    "level": "INFO",
+    "enable_audit_trail": true,
+    "log_user_queries": true,
+    "log_answer_generation": true,
+    "log_citation_usage": true
+  },
+
+  "meridian_specific": {
+    "pipeline_focus": [
+      "checkpoint_inhibitors",
+      "car_t_therapies",
+      "targeted_small_molecules"
+    ],
+    "competitor_monitoring": [
+      "merck",
+      "bristol_myers_squibb",
+      "roche",
+      "pfizer",
+      "novartis"
+    ],
+    "key_indications": [
+      "melanoma",
+      "lung_cancer",
+      "breast_cancer",
+      "colorectal_cancer"
+    ],
+    "regulatory_focus": [
+      "fda_approvals",
+      "breakthrough_designations",
+      "orphan_drug_designations"
+    ]
+  }
+}
